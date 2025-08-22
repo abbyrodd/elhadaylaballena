@@ -1,0 +1,59 @@
+:root {
+    --bg-color: #f08080;
+    --bg-color-high-contrast: #AF1818;
+    --text-color: #ffffff;
+    --font-default: 16;
+    --font-family-title: "dream-big-regular", sans-serif;
+    --font-family: "la-parisienne-serif", serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #660066;
+        --text-color: #ffffff;
+    }
+}
+
+/*
+
+font-family: "dream-big-wide", sans-serif;
+font-weight: 700;
+font-style: normal;
+
+font-family: "dream-big-regular", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+font-family: "dream-big-narrow", sans-serif;
+font-weight: 300;
+font-style: normal;
+
+*/
+
+
+/*
+font-family: "la-parisienne-sans", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+font-family: "la-parisienne-sans", sans-serif;
+font-weight: 400;
+font-style: italic;
+
+font-family: "la-parisienne-script-casual", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+font-family: "la-parisienne-script-regular", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+font-family: "la-parisienne-serif", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+font-family: "la-parisienne-serif-inline", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+*/
