@@ -169,31 +169,51 @@ a:focus-visible {
 
 
 
-.icon-high-contrast {
-    background: none;
-    border: none;
+.c-high-contrast {
     position: fixed;
     right: calc(24 / var(--font-default) * 1rem);
     top: calc(24 / var(--font-default) * 1rem);
-    height: calc(1 / var(--font-default) * 1rem);
-    width: calc(1 / var(--font-default) * 1rem);
-    cursor: pointer;
+    height: calc(24 / var(--font-default) * 1rem);
+    width: calc(24 / var(--font-default) * 1rem);
 }
 
-.icon-high-contrast::before {
+.c-high-contrast__label {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.c-high-contrast__label::before {
     content: '';
     display: block;
     background: url('/img/contrast-icon.png') center center no-repeat transparent;
     background-size: contain;
     height: calc(24 / var(--font-default) * 1rem);
     width: calc(24 / var(--font-default) * 1rem);
-    position: absolute;
-    top: calc(-12 / var(--font-default) * 1rem);
-    left: calc(-12 / var(--font-default) * 1rem);
 }
 
-.icon-high-contrast:checked::before {
+.c-high-contrast__input {
+    background: none;
+    border: none;
+    height: calc(1 / var(--font-default) * 1rem);
+    width: calc(1 / var(--font-default) * 1rem);
+    position: absolute;
+    top: calc(50% - 1px);
+    left: calc(50% - 1px);
+}
+
+.c-high-contrast__input:checked + .c-high-contrast__label::before {
     background-image: url('/img/contrast-icon-2.png');
+}
+
+.c-high-contrast__input:focus-visible {
+    outline: none;
+}
+
+.c-high-contrast__input:focus-visible + .c-high-contrast__label::before {
+    border-radius: 50%;
+    border: calc(2 / var(--font-default) * 1rem) dotted #fff;
 }
 
 
