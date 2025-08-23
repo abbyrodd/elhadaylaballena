@@ -5,7 +5,7 @@
     --font-default: 16;
     --font-family-title: "dream-big-regular", sans-serif;
     --font-family-subtitle: "la-parisienne-serif", serif;
-    --font-family: "la-parisienne-serif", serif;
+    --font-family: "roboto", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,6 +14,22 @@
         --text-color: #ffffff;
     }
 }
+
+/*
+
+font-family: "roboto", sans-serif;
+font-weight: 400; // 700
+font-style: normal; // italic
+
+font-family: "roboto-condensed", sans-serif;
+font-weight: 400; // 700
+font-style: normal; // italic
+
+font-family: "roboto-mono", monospace;
+font-weight: 400; // 700
+font-style: normal; // italic
+
+*/
 
 /*
 

@@ -14,15 +14,9 @@ html {
     }
 }
 
-/* 1024 */
-@media only screen and (min-width: 64em) {
 
-}
 
-[data-theme="high-contrast"] {
-    background-color: var(--bg-color-high-contrast);
-}
-
+/* fondo de estrellas estrellas */
 #stars {
     width: 1px;
     height: 1px;
@@ -89,6 +83,9 @@ html {
     }
 }
 
+
+
+/* elementos */
 a {
     color: #fff;
 }
@@ -102,6 +99,13 @@ a:focus-visible {
     padding: calc(4 / var(--font-default) * 1rem);
 }
 
+p {
+    margin: 0 0 1em;
+}
+
+
+
+/* títulos */
 .h1 {
     font-size: calc(56 / var(--font-default) * 1rem);
     font-family: var(--font-family-title);
@@ -142,15 +146,13 @@ a:focus-visible {
     }
 }
 
-
-
 .h2 {
     font-size: calc(24 / var(--font-default) * 1rem);
     font-family: var(--font-family-subtitle);
     font-weight: 400;
     font-style: normal;
     line-height: 1;
-    margin: 0 0 .5em;
+    margin: 0 0 1em;
 }
 
 /* 768 */
@@ -169,6 +171,7 @@ a:focus-visible {
 
 
 
+/* selector alto contraste */
 .c-high-contrast {
     position: fixed;
     right: calc(24 / var(--font-default) * 1rem);
@@ -233,4 +236,11 @@ a:focus-visible {
     position: absolute;
     width: 1px;
     white-space: nowrap;
+}
+
+
+
+/* cambio de colores alto contraste */
+[data-theme="high-contrast"] {
+    background-color: var(--bg-color-high-contrast);
 }
