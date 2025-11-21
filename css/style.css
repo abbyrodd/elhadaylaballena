@@ -1,4 +1,4 @@
-html {
+body {
     background-color: var(--bg-color); /*mediumslateblue*/
     color: #fff;
     font-family: var(--font-family);
@@ -9,7 +9,7 @@ html {
 
 /* 768 */
 @media only screen and (min-width: 48em) {
-    html {
+    body {
         padding: calc(64 / var(--font-default) * 1rem) calc(32 / var(--font-default) * 1rem);
     }
 }
@@ -17,6 +17,15 @@ html {
 
 
 /* fondo de estrellas estrellas */
+.c-stars {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
 #stars {
     width: 1px;
     height: 1px;
