@@ -2,8 +2,6 @@ body {
     background-color: var(--bg-color); /*mediumslateblue*/
     color: #fff;
     font-family: var(--font-family);
-    height: 100%;
-    overflow: hidden;
     padding: calc(64 / var(--font-default) * 1rem) calc(24 / var(--font-default) * 1rem);
 }
 
@@ -250,6 +248,6 @@ p {
 
 
 /* cambio de colores alto contraste */
-[data-theme="high-contrast"] {
+[data-theme="high-contrast"] body {
     background-color: var(--bg-color-high-contrast);
 }
