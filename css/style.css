@@ -7,10 +7,10 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-family);
-    padding: 0 calc(40 / var(--font-default) * 1rem) 0 calc(24 / var(--font-default) * 1rem);
+    padding: 0 calc(24 / var(--font-default) * 1rem);
 }
 
-/* 768 */
+/* 768px */
 @media only screen and (min-width: 48em) {
     body {
         padding: 0 calc(48 / var(--font-default) * 1rem) calc(24 / var(--font-default) * 1rem);
@@ -22,7 +22,9 @@ body {
 /* Layout */
 .m-header {
     margin-bottom: calc(16 / var(--font-default) * 1rem);
-    padding-top: calc(32 / var(--font-default) * 1rem);
+    padding-top: calc(32 / var(--font-default) * 1rem);   
+    position: relative;
+    z-index: 9;
 }
 
 .m-footer {
@@ -161,24 +163,12 @@ dl {
     font-family: var(--font-family-subtitle);
 }
 
-/* 768 */
+/* 768px */
 @media only screen and (min-width: 48em) {
     .h1 {
         font-size: calc(80 / var(--font-default) * 1rem);
     }
 }
-
-/* 1024 */
-/* @media only screen and (min-width: 64em) {
-    .h1 {
-        font-size: calc(104 / var(--font-default) * 1rem);
-    }
-
-    .h1 > .subtitle {
-        font-size: calc(54 / var(--font-default) * 1rem);
-        font-family: var(--font-family-subtitle);
-    }
-} */
 
 .h2 {
     font-size: calc(24 / var(--font-default) * 1rem);
@@ -186,17 +176,17 @@ dl {
     font-weight: 400;
     font-style: normal;
     line-height: 1;
-    margin: 1.8em 0 .75em;
+    margin: 0 0 .75em;
 }
 
-/* 768 */
+/* 768px */
 @media only screen and (min-width: 48em) {
     .h2 {
         font-size: calc(24 / var(--font-default) * 1rem);
     }
 }
 
-/* 1024 */
+/* 1024px */
 /* @media only screen and (min-width: 64em) {
     .h2 {
         font-size: calc(32 / var(--font-default) * 1rem);
@@ -207,18 +197,20 @@ dl {
 
 /* Selector alto contraste */
 .c-high-contrast {
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    height: calc(44 / var(--font-default) * 1rem);
     position: fixed;
-    right: calc(16 / var(--font-default) * 1rem);
-    top: calc(16 / var(--font-default) * 1rem);
-    height: calc(24 / var(--font-default) * 1rem);
-    width: calc(24 / var(--font-default) * 1rem);
+    right: 0;
+    top: 0;
+    width: calc(44 / var(--font-default) * 1rem);
 }
 
 .c-high-contrast__label {
     cursor: pointer;
-    left: 0;
+    right: calc(8 / var(--font-default) * 1rem);
     position: absolute;
-    top: 0;
+    top: calc(8 / var(--font-default) * 1rem);
 }
 
 .c-high-contrast__label::before {
@@ -337,8 +329,25 @@ dl {
     display: block;
 }
 
+.u-mb-section {
+    margin-bottom: calc(24 / var(--font-default) * 1rem);
+
+    /* 768px */
+    @media only screen and (min-width: 48em) {
+        margin-bottom: calc(32 / var(--font-default) * 1rem);
+    }
+}
+
 .u-mb-0 {
-    margin: 0;
+    margin-bottom: 0;
+}
+
+.u-mb-24 {
+    margin-bottom: calc(24 / var(--font-default) * 1rem);
+}
+
+.u-mb-32 {
+    margin-bottom: calc(32 / var(--font-default) * 1rem);
 }
 
 .u-text-align-right {
@@ -371,21 +380,42 @@ dl {
 /* Listado jabones */
 .c-list-details {
     display: flex;
-    flex-flow: row wrap;
-    gap: calc(24 / var(--font-default) * 1rem);
+    flex-flow: column nowrap;
+    gap: calc(24 / var(--font-default) * 1rem) 0;
+    margin: 0 0 calc(32 / var(--font-default) * 1rem);
+
+    /* 440px */
+    @media only screen and (min-width: 27.5em) {
+        flex-flow: row wrap;
+        gap: calc(24 / var(--font-default) * 1rem);
+        margin-bottom: calc(40 / var(--font-default) * 1rem);
+    }
+
+    /* 768px */
+    @media only screen and (min-width: 48em) {
+        margin-bottom: calc(48 / var(--font-default) * 1rem);
+    }
 }
 
 .c-list-details__detail {
-    margin-top: calc(16 / var(--font-default) * 1rem);
     position: relative;
+
+    /* 440px */
+    @media only screen and (min-width: 27.5em) {
+        max-width: calc(50% - (24 / var(--font-default) * 1rem));
+    }
+
+    /* 768px */
+    @media only screen and (min-width: 48em) {
+        max-width: calc(25% - (24 / var(--font-default) * 1rem));
+    }
 
     img {
         border: calc(1 / var(--font-default) * 1rem) solid var(--text-color);
         border-radius: calc(16 / var(--font-default) * 1rem);
-        height: 256px;
-        width: 256px;
+        height: 100%;
+        width: 100%;
     }
-
 }
 
 
@@ -395,6 +425,7 @@ dl {
     display: flex;
     flex-flow: row nowrap;
     gap: calc(8 / var(--font-default) * 1rem);
+    margin-bottom: calc(40 / var(--font-default) * 1rem);
 
     > li {
         font-size: calc(14 / var(--font-default) * 1rem);
