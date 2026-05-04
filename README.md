@@ -14,21 +14,11 @@ Instalar dependencias de node
 npm install
 ```
 
-### Arrancar servidor http
-```
-npm run server
-```
-
 ### Tareas de desarrollo
-Tarea que observa cambios para compilar archivos.
+Arranca generador de estáticos y servidor
 ```
-npm run watch
+npm run start
 ```
-
-Tarea que prepara la carpeta dist para su distribución
-```
-npm run build
-
 
 #### Construído con
 * HTML 

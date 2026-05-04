@@ -1,0 +1,58 @@
+:root {
+    /* --bg-color: #f08080; */
+    /* --bg-color: #6987ee; */
+    /* --bg-color: #7883f0; */
+    /* --bg-color: #8d9dee; */
+    --bg-color: #7B8DEA;
+
+    /* --bg-color-high-contrast: #AF1818; */
+    --bg-color-high-contrast: #091657;
+    
+    /* --bg-color-dark-mode: #333333; */
+    --bg-color-dark-mode: #171c33;
+    
+    --text-color: #ffffff;
+    --font-default: 16;
+    --font-family-title: "dream-big-regular", sans-serif;
+    --font-family-subtitle: "la-parisienne-serif", serif;
+    --font-family: "roboto", sans-serif;
+}
+
+:root[data-theme="high-contrast"] {
+    --bg-color: var(--bg-color-high-contrast);
+}
+
+@media (prefers-contrast: more) {
+    :root {
+        --bg-color: var(--bg-color-high-contrast);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: var(--bg-color-dark-mode);
+    }
+}
+
+/*
+font-family: "roboto", sans-serif;
+font-weight: 400; // 700
+font-style: normal; // italic
+*/
+
+/*
+
+font-family: "dream-big-regular", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+*/
+
+
+/*
+
+font-family: "la-parisienne-serif", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+*/

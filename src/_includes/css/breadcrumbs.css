@@ -1,0 +1,16 @@
+/* Migas de pan */
+.c-breadcrumbs {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: calc(8 / var(--font-default) * 1rem);
+    margin-bottom: calc(40 / var(--font-default) * 1rem);
+
+    > li {
+        font-size: calc(14 / var(--font-default) * 1rem);
+
+        &:not(:first-child)::before {
+            content: '\BB';
+            margin: 0 calc(4 / var(--font-default) * 1rem) 0 calc(6 / var(--font-default) * 1rem);
+        } 
+    }
+}

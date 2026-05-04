@@ -1,0 +1,54 @@
+html, 
+body {
+    height: fit-content;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    padding: 0 calc(24 / var(--font-default) * 1rem);
+    transition: background-color .5s ease, color .5s ease;
+}
+
+/* 768px */
+@media only screen and (min-width: 48em) {
+    body {
+        padding: 0 calc(48 / var(--font-default) * 1rem) calc(24 / var(--font-default) * 1rem);
+    }
+}
+
+main {
+    min-height: calc(100vh - calc(294 / var(--font-default) * 1rem));
+}
+
+a {
+    color: var(--text-color);
+    display: inline-block;
+    position: relative;
+    text-decoration: underline;
+}
+
+a:hover,
+a:active,
+a:focus {
+    /*background-color: var(--bg-color-high-contrast);*/
+    outline: dashed var(--text-color);
+    transition: outline .2s ease;
+}
+
+p {
+    margin: 0 0 1em;
+    line-height: 1.25;;
+}
+
+ul,
+ol,
+dl {
+    margin: 0;
+    padding: 0;
+
+    > li {
+        list-style: none;
+    }
+}

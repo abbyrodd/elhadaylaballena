@@ -1,0 +1,62 @@
+/* Selector alto contraste */
+.c-high-contrast {
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    height: calc(44 / var(--font-default) * 1rem);
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: calc(44 / var(--font-default) * 1rem);
+}
+
+.c-high-contrast__label {
+    cursor: pointer;
+    right: calc(8 / var(--font-default) * 1rem);
+    position: absolute;
+    top: calc(8 / var(--font-default) * 1rem);
+}
+
+.c-high-contrast__label::before {
+    background: url('/img/contrast-icon.png') center center no-repeat transparent;
+    background-size: contain;
+    border: calc(2 / var(--font-default) * 1rem) dotted transparent;
+    content: '';
+    display: block;
+    height: calc(24 / var(--font-default) * 1rem);
+    width: calc(24 / var(--font-default) * 1rem);
+
+    @media (prefers-color-scheme: dark) {
+        background-image: url('/img/contrast-icon-2.png');
+    }
+}
+
+.c-high-contrast__input {
+    background: none;
+    border: none;
+    height: calc(1 / var(--font-default) * 1rem);
+    left: calc(50% - 1px);
+    position: absolute;
+    top: calc(50% - 1px);
+    width: calc(1 / var(--font-default) * 1rem);
+}
+
+.c-high-contrast__input:checked + .c-high-contrast__label::before {
+    background-image: url('/img/contrast-icon-2.png');
+}
+
+.c-high-contrast__input {
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+.c-high-contrast__input:hover,
+.c-high-contrast__input:active,
+.c-high-contrast__input:focus {
+    + .c-high-contrast__label::before {
+        border-radius: 50%;
+        border-color: var(--text-color);
+    }
+}

@@ -1,0 +1,46 @@
+/* Títulos */
+.h1 {
+    font-size: calc(48 / var(--font-default) * 1rem);
+    font-family: var(--font-family-title);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    margin: 0;
+    border-bottom: calc(2 / var(--font-default) * 1rem) solid var(--text-color);
+    padding-bottom: .25em;
+
+    > .subtitle {
+        font-size: .5em;
+        font-family: var(--font-family-subtitle);
+    }
+}
+
+/* 480px */
+@media only screen and (min-width: 30em) {
+    .h1 {
+        font-size: calc(64 / var(--font-default) * 1rem);
+    }
+}
+
+/* 768px */
+@media only screen and (min-width: 48em) {
+    .h1 {
+        font-size: calc(80 / var(--font-default) * 1rem);
+    }
+}
+
+.h2 {
+    font-size: calc(24 / var(--font-default) * 1rem);
+    font-family: var(--font-family-subtitle);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    margin: 0 0 .75em;
+}
+
+/* 768px */
+@media only screen and (min-width: 48em) {
+    .h2 {
+        font-size: calc(24 / var(--font-default) * 1rem);
+    }
+}
