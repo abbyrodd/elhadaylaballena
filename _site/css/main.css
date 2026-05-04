@@ -511,7 +511,6 @@ a:active,
 a:focus {
     /*background-color: var(--bg-color-high-contrast);*/
     outline: dashed var(--text-color);
-    transition: outline .2s ease;
 }
 
 p {
