@@ -634,8 +634,10 @@ dl {
     }
 }
 
+
+
 .h2 {
-    font-size: calc(24 / var(--font-default) * 1rem);
+    font-size: calc(32 / var(--font-default) * 1rem);
     font-family: var(--font-family-subtitle);
     font-weight: 400;
     font-style: normal;
@@ -646,6 +648,24 @@ dl {
 /* 768px */
 @media only screen and (min-width: 48em) {
     .h2 {
+        font-size: calc(32 / var(--font-default) * 1rem);
+    }
+}
+
+
+
+.h3 {
+    font-size: calc(24 / var(--font-default) * 1rem);
+    font-family: var(--font-family-subtitle);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    margin: 0 0 .75em;
+}
+
+/* 768px */
+@media only screen and (min-width: 48em) {
+    .h3 {
         font-size: calc(24 / var(--font-default) * 1rem);
     }
 }
@@ -716,7 +736,7 @@ dl {
 
         &:not(:first-child)::before {
             content: '\BB';
-            margin: 0 calc(4 / var(--font-default) * 1rem) 0 calc(6 / var(--font-default) * 1rem);
+            margin: 0 calc(8 / var(--font-default) * 1rem) 0 calc(6 / var(--font-default) * 1rem);
         } 
     }
 }

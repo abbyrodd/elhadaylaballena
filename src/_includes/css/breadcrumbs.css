@@ -10,7 +10,7 @@
 
         &:not(:first-child)::before {
             content: '\BB';
-            margin: 0 calc(4 / var(--font-default) * 1rem) 0 calc(6 / var(--font-default) * 1rem);
+            margin: 0 calc(8 / var(--font-default) * 1rem) 0 calc(6 / var(--font-default) * 1rem);
         } 
     }
 }
