@@ -13,7 +13,7 @@
     "@11ty/eleventy": "^3.1.5"
   },
   "scripts": {
-    "server": "eleventy --serve",
+    "start": "eleventy --serve",
     "clean": "node -e \"fs.rmSync('docs/css/main.njk', {force: true})\""
   }
 }
